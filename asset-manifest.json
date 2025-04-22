@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/happygolucky/static/css/main.472c5c13.css",
+    "main.js": "/happygolucky/static/js/main.d3d895e3.js",
+    "index.html": "/happygolucky/index.html",
+    "main.472c5c13.css.map": "/happygolucky/static/css/main.472c5c13.css.map",
+    "main.d3d895e3.js.map": "/happygolucky/static/js/main.d3d895e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.472c5c13.css",
+    "static/js/main.d3d895e3.js"
+  ]
+}
