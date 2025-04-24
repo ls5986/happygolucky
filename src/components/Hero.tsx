@@ -59,26 +59,24 @@ const Hero = () => {
           <SlotMachine onWin={handleWin} />
         </motion.div>
 
-        <AnimatePresence>
-          {showCTA && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="mt-12"
+        {showCTA && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="mt-12"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={scrollToContact}
+              className="bg-primary text-light px-10 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition-all shadow-lg border border-primary/30"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={scrollToContact}
-                className="bg-primary text-light px-10 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition-all shadow-lg border border-primary/30"
-              >
-                Start Your Project
-              </motion.button>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              Start Your Project
+            </motion.button>
+          </motion.div>
+        )}
 
         <motion.p 
           className="text-lg md:text-xl text-gray-300 mt-8 max-w-2xl mx-auto"

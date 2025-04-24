@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface SlotMachineProps {
   onWin: () => void;
@@ -130,20 +130,18 @@ const SlotMachine: React.FC<SlotMachineProps> = ({ onWin }) => {
       </div>
       
       {/* Win message */}
-      <AnimatePresence>
-        {showWinMessage && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            className="mt-8"
-          >
-            <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
-              🎉 Lucky Winner! 🎉
-            </span>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {showWinMessage && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          className="mt-8"
+        >
+          <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
+            🎉 Lucky Winner! 🎉
+          </span>
+        </motion.div>
+      )}
     </div>
   );
 };
